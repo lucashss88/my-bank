@@ -1,5 +1,6 @@
 package br.com.bank.service.usecase;
 
+import br.com.bank.external.ProducerMessage;
 import br.com.bank.model.Customer;
 import br.com.bank.repository.CustomerRepository;
 import br.com.bank.service.CustomerUseCase;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class CustomerUseCaseImpl implements CustomerUseCase {
 
+    private final ProducerMessage producerMessage;
     private final CustomerRepository customerRepository;
 
     @Override
@@ -23,8 +25,7 @@ public class CustomerUseCaseImpl implements CustomerUseCase {
         var request = customer.get().getRequests();
         customer.get().setRequests(request+1);
         this.customerRepository.saveAndFlush(customer.get());
-
-        //External call
+        this.producerMessage.publish(document);
         return "Card requested successfully";
     }
 }

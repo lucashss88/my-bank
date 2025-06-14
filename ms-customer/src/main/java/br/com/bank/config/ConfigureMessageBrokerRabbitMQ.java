@@ -15,7 +15,7 @@ public class ConfigureMessageBrokerRabbitMQ {
     private final AmqpAdmin rabbitmq;
 
     private Queue createQueueRequestCard() {
-        return new Queue("requestCard", true, true, true);
+        return new Queue("requestCard", true, false, true);
     }
 
     private DirectExchange checkRequestCardExchange() {
