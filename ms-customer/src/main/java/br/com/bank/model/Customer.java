@@ -8,6 +8,8 @@ import lombok.*;
 @Setter
 @Table(name = "tb_customers")
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
     @Id
@@ -15,4 +17,5 @@ public class Customer {
     private Long id;
     private String email;
     private String document;
+    private int requests;
 }

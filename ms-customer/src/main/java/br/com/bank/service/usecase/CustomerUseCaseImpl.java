@@ -19,7 +19,12 @@ public class CustomerUseCaseImpl implements CustomerUseCase {
 
     @Override
     public String sendRequest(String document) {
-        //External call to request card queue
+        var customer = this.customerRepository.findByDocument(document);
+        var request = customer.get().getRequests();
+        customer.get().setRequests(request+1);
+        this.customerRepository.saveAndFlush(customer.get());
+
+        //External call
         return "Card requested successfully";
     }
 }
