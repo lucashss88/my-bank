@@ -17,7 +17,7 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String flag;
+    private ENUM flag = ["MASTERCARD","VISA","ELO"];
     private String name;
     private BigDecimal cardLimit;
     private String document;

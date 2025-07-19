@@ -1,0 +1,10 @@
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/ApplicationCustomer.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/config/ConfigureMessageBrokerRabbitMQ.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/controller/api/CustomerController.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/controller/request/CustomerRequest.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/external/ProducerMessage.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/external/ProducerMessageImpl.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/model/Customer.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/repository/CustomerRepository.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/service/CustomerUseCase.java
+/workspaces/my-bank/ms-customer/src/main/java/br/com/bank/service/usecase/CustomerUseCaseImpl.java
