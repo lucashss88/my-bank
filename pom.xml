@@ -11,7 +11,9 @@
   <name>my-bank</name>
   <modules>
     <module>ms-customer</module>
+    <module>ms-card</module>
   </modules>
+
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
